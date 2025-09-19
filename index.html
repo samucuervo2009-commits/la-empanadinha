@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Empanadinha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8f0;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ff914d;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    header nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+      padding: 100px 20px;
+      min-height: 100vh;
+      text-align: center;
+    }
+    section.active {
+      display: block;
+    }
+    #inicio h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    #inicio p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    section img {
+      max-width: 70%;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    #contacto .info {
+      text-align: left;
+      max-width: 500px;
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #ff914d;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a onclick="mostrar('inicio')">Inicio</a>
+      <a onclick="mostrar('menu')">Menú</a>
+      <a onclick="mostrar('beneficios')">Beneficios</a>
+      <a onclick="mostrar('ubicacion')">Ubicación</a>
+      <a onclick="mostrar('contacto')">Contáctanos</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="active">
+    <h1>LA EMPANADINHA</h1>
+    <p><em>Empanadas deliciosas para personas amistosas</em></p>
+    <img src="logo.png" alt="Logo La Empanadinha">
+  </section>
+
+  <section id="menu">
+    <h2>Menú</h2>
+    <img src="menu.png" alt="Menú de La Empanadinha">
+  </section>
+
+  <section id="beneficios">
+    <h2>5 Cosas que nos hacen únicos</h2>
+    <img src="beneficios.png" alt="Beneficios de La Empanadinha">
+  </section>
+
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+    <img src="ubicacion.png" alt="Ubicación Colegio Campestre Sabana de Lourdes">
+    <p><strong>COLEGIO CAMPESTRE SABANA DE LOURDES - TABIO, CUNDINAMARCA</strong></p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos y conócenos</h2>
+    <p>En <strong>La Empanadinha</strong> estamos listos para atenderte. Escríbenos, llámanos o visítanos, ¡queremos conocerte!</p>
+    <div class="info">
+      <p><strong>Teléfono:</strong> 310 123 4567</p>
+      <p><strong>Email:</strong>laempanadinha@gmail.com</p>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 La Empanadinha. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function mostrar(id) {
+      let secciones = document.querySelectorAll("section");
+      secciones.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
+
